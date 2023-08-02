@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var lamp = false
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+            ZStack {
+                Color(lamp ? .black: .white)
+                Button(action: {
+                    lamp.toggle()
+                }){
+                    Text("encender")
+                }
+            }
+        }.ignoresSafeArea(.all)
     }
 }
 
