@@ -14,6 +14,8 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            Text("Ejemplo de botones")
+                .font(.title)
             ZStack {
                 Color(lamp ? .black: .white)
                 Button(action: {
@@ -27,10 +29,10 @@ struct ContentView: View {
                     face.toggle()
                 }){
                     Text(face ? "🐶":"🐱")
-                        .font(.system(size: 200))
+                        .font(.system(size: 150))
                 }
             }
-        }.ignoresSafeArea(.all)
+        }
     }
 }
 
